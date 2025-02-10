@@ -1,0 +1,49 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.place-list {
+  list-style: none;
+  padding: 0;
+}
+
+.place-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.place-item h2 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.place-item p {
+  margin: 5px 0;
+}
+
+.reviews {
+    margin-top: 10px;
+}
+.review {
+    border-top: 1px solid #eee;
+    padding: 5px 0;
+}
