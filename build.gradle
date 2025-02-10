@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.foodrecommender.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.foodrecommender.app"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    // Core
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    
+    // Architecture Components
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    implementation 'androidx.fragment:fragment-ktx:1.6.2'
+    
+    // Location Services
+    implementation 'com.google.android.gms:play-services-location:21.2.0'
+    
+    // Networking
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    
+    // Database
+    implementation 'androidx.room:room-runtime:2.6.1'
+    kapt 'androidx.room:room-compiler:2.6.1'
+    
+    // HTML Parsing
+    implementation 'org.jsoup:jsoup:1.16.2'
+    
+    // DI
+    implementation 'io.insert-koin:koin-android:3.5.0'
+    
+    // OpenAI (Add your API key in local.properties)
+    implementation 'com.aallam.openai:openai-client:3.3.0'
+}
