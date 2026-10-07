@@ -1,0 +1,5 @@
+# Copy to local.properties. Never commit local.properties or a real API key.
+sdk.dir=/path/to/android/sdk
+# Places API (New). Restrict the key to package com.foodrecommender.app
+# and your signing certificate. Leave empty to use the public Overpass fallback.
+GOOGLE_PLACES_API_KEY=

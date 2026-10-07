@@ -1,0 +1,41 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    plugins {
+        id 'com.android.application' version '8.7.3'
+        id 'org.jetbrains.kotlin.android' version '2.0.21'
+        id 'org.jetbrains.kotlin.jvm' version '2.0.21'
+        id 'org.jetbrains.kotlin.plugin.serialization' version '2.0.21'
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'android-food-recommander'
+include ':core'
+
+def sdkDir = System.getenv('ANDROID_HOME') ?: System.getenv('ANDROID_SDK_ROOT')
+def localPropsFile = new File(settingsDir, 'local.properties')
+if (localPropsFile.exists()) {
+    def props = new Properties()
+    localPropsFile.withInputStream { props.load(it) }
+    def fromFile = props.getProperty('sdk.dir')
+    if (fromFile) {
+        sdkDir = fromFile
+    }
+}
+
+if (sdkDir != null && new File(sdkDir, 'platforms').isDirectory()) {
+    include ':app'
+} else {
+    println 'Android SDK not found. Included :core only.'
+}
