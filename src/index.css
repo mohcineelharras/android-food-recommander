@@ -1,14 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
+  color: #222;
 }
 
 .container {
   max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 16px auto;
+  padding: 16px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -16,7 +23,28 @@ body {
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #222;
+}
+
+.privacy {
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+button {
+  font: inherit;
+  background: #1565c0;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 14px;
+  min-height: 44px;
+}
+
+button:focus-visible {
+  outline: 3px solid #0d47a1;
+  outline-offset: 2px;
 }
 
 .place-list {
@@ -29,11 +57,12 @@ h1 {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 4px;
+  overflow-wrap: anywhere;
 }
 
 .place-item h2 {
   margin-top: 0;
-  color: #007bff;
+  color: #0d47a1;
 }
 
 .place-item p {
@@ -41,9 +70,18 @@ h1 {
 }
 
 .reviews {
-    margin-top: 10px;
+  margin-top: 10px;
 }
+
 .review {
-    border-top: 1px solid #eee;
-    padding: 5px 0;
+  border-top: 1px solid #eee;
+  padding: 5px 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+  }
 }

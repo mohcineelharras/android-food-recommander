@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Food Recommender</string>
+    <string name="privacy_notice">Search uses an approximate area of about 1 km. That area is not saved on this device. Results stay in memory until you leave the app or clear them. Nothing is sent to an account or an AI service.</string>
+    <string name="radius_label">Search distance</string>
+    <string name="search">Find restaurants</string>
+    <string name="clear_cache">Clear cached restaurants</string>
+    <string name="open_settings">Open settings</string>
+    <string name="loading">Looking for restaurants…</string>
+    <string name="idle_hint">Choose a distance, then find restaurants near you.</string>
+    <string name="empty">No restaurants in this area.</string>
+    <string name="results_label">Restaurants</string>
+    <string name="location_permission">Location permission is needed to find nearby restaurants. You can allow approximate location, or enable it later in system settings.</string>
+    <string-array name="radius_labels">
+        <item>0.5 km</item>
+        <item>1 km</item>
+        <item>2 km</item>
+        <item>5 km</item>
+    </string-array>
+    <plurals name="results">
+        <item quantity="one">%d restaurant</item>
+        <item quantity="other">%d restaurants</item>
+    </plurals>
+</resources>
